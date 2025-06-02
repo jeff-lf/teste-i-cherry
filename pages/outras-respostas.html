@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Resolução de Questões</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+  <link rel="stylesheet" href="../styles/global.css">
+ 
+</head>
+<body>
+  <h1 style="font-family: Montserrat, sans-serif; color: rgb(249, 249, 249);">Resolução de Questões</h1>
+
+  <div id="app"></div>
+  
+<div class="card" style="
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 20px 20px 20px;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.1rem;
+">
+
+  <h2 style="font-family: Montserrat, sans-serif; font-size: 2rem;">
+    6. Google Tag Manager – Conceitos Básicos
+  </h2>
+
+  <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;"><strong>Pergunta:</strong></p>
+  <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+    Explique, de forma resumida, qual a diferença entre uma Variável, um Acionador (Trigger) e
+uma Tag no Google Tag Manager.
+  </p>
+
+    <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;"><strong>Resposta:</strong></p>
+    <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+    No Google Tag Manager, uma <strong>Variável</strong> é um elemento que armazena informações que podem ser usadas em Tags e Acionadores. Por exemplo, uma variável pode conter o ID de um produto ou o valor de uma transação. As variáveis são usadas para capturar e reutilizar dados em diferentes Tags e Acionadores.
+    </p>
+    <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+    Um <strong>Acionador (Trigger)</strong> é uma condição que determina quando uma Tag deve ser executada. Por exemplo, um acionador pode ser configurado para disparar uma Tag quando um usuário visita uma página específica ou clica em um botão. Os acionadores são essenciais para controlar o momento em que as Tags são ativadas.
+    </p>
+    <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+    Uma <strong>Tag</strong> é um pedaço de código que é executado quando um acionador é ativado. As Tags são usadas para enviar dados para o Google Analytics, ou para executar outras ações, como rastreamento de conversões. As Tags são configuradas no Google Tag Manager e podem ser disparadas com base nas condições definidas pelos acionadores.
+    </p>
+
+
+
+</div>
+
+<div class="card" style="
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 20px 20px 20px;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.1rem;
+">
+
+  <h2 style="font-family: Montserrat, sans-serif; font-size: 2rem;">
+    7. Google Tag Manager – Data Layer
+  </h2>
+
+  <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;"><strong>Pergunta:</strong></p>
+  <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+    O Data Layer é uma das principais ferramentas no GTM para armazenar e manipular dados
+antes do envio para outras ferramentas.<br><br>
+1. Explique o que é o Data Layer e sua importância no GTM.<br>
+2. Como você adicionaria manualmente um evento chamado "cadastro_concluido" ao Data Layer?
+  </p>
+
+    <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;"><strong>Resposta:</strong></p>
+    <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+    O Data Layer é uma estrutura de dados que permite armazenar e organizar informações que serão enviadas para o Google Tag Manager. Ele é essencial porque fornece um meio consistente e estruturado para capturar dados do site, como eventos de interação do usuário, informações de transações e outros dados relevantes. O uso do Data Layer facilita a implementação de Tags e Acionadores, pois permite que os dados sejam acessados de forma centralizada e reutilizados em diferentes contextos.
+    </p>
+    <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+    Para adicionar manualmente um evento chamado "cadastro_concluido" ao Data Layer, você pode usar o seguinte código JavaScript:
+    </p>
+    <pre style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+      <code class="language-javascript">
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'cadastro_concluido'
+        });
+      </code>
+        </pre>
+    <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+    Esse código verifica se o Data Layer já existe e, se não existir, o inicializa como um array vazio. Em seguida, ele adiciona um novo objeto ao Data Layer com a chave 'event' definida como 'cadastro_concluido'. Isso permitirá que o GTM capture esse evento e execute as Tags associadas a ele.
+    </p>
+    
+    
+
+
+
+</div>
+
+<div class="card" style="
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 20px 20px 20px;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.1rem;
+">
+
+  <h2 style="font-family: Montserrat, sans-serif; font-size: 2rem;">
+    8. Organização e Prioridades
+  </h2>
+
+  <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;"><strong>Pergunta:</strong></p>
+  <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+    Imagine que você precisa implementar um novo trackeamento no site de um cliente para
+capturar interações com banners promocionais.<br><br>
+1. Quais seriam os passos principais para organizar essa implementação de forma
+eficiente?<br>
+2. Como você garantiria que a equipe envolvida (desenvolvedores, analistas e marketing)
+estivesse alinhada sobre os objetivos do trackeamento?
+  </p>
+
+    <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;"><strong>Resposta:</strong></p>
+    <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+    Para organizar a implementação do trackeamento de banners promocionais de forma eficiente, eu seguiria os seguintes passos principais:
+    </p>
+    <ol style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+      <li>
+        <strong>Definição de Objetivos:</strong> Identificar quais interações com os banners precisam ser rastreadas (cliques, visualizações, etc.) e quais métricas são importantes para o cliente.
+      </li>
+      <li>
+        <strong>Planejamento da Implementação:</strong> Criar um plano detalhado que inclua as Tags necessárias, Acionadores e Variáveis no Google Tag Manager, além de definir como os dados serão enviados para o Google Analytics.
+      </li>
+      <li>
+        <strong>Colaboração com a Equipe:</strong> Reunir a equipe envolvida (desenvolvedores, analistas e marketing) para discutir o plano e garantir que todos compreendam os objetivos e as responsabilidades.
+      </li>
+      <li>
+        <strong>Implementação Técnica:</strong> Trabalhar com os desenvolvedores para implementar as Tags e Acionadores no GTM, garantindo que o código esteja correto e funcionando conforme esperado.
+      </li>
+      <li>
+        <strong>Testes e Validação:</strong> Realizar testes para verificar se os dados estão sendo capturados corretamente e se as Tags estão disparando nos momentos certos.
+      </li>
+      <li>
+        <strong>Documentação:</strong> Documentar todo o processo, incluindo as configurações do GTM, para referência futura e para facilitar a manutenção.
+      </li>
+        <li>
+            <strong>Monitoramento Contínuo:</strong> Após a implementação, monitorar os dados coletados para garantir que tudo esteja funcionando corretamente e fazer ajustes conforme necessário.
+        </li>
+    </ol>
+    <p style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+    Para garantir que a equipe envolvida esteja alinhada sobre os objetivos do trackeamento, eu adotaria as seguintes práticas:
+    </p>
+    <ul style="font-family: Montserrat, sans-serif; font-size: 1.1rem;">
+      <li>
+        <strong>Reuniões de Alinhamento:</strong> Realizar reuniões regulares para discutir o progresso, esclarecer dúvidas e garantir que todos estejam na mesma página.
+      </li>
+      <li>
+        <strong>Comunicação Clara:</strong> Comunicar atualizações, documentos e feedbacks de forma clara e acessível a todos.
+      </li>
+      <li>
+        <strong>Definição de Papéis e Responsabilidades:</strong> Especificar claramente as funções de cada membro da equipe para evitar confusões e garantir que todos saibam o que se espera deles.
+      </li>
+      <li>
+        <strong>Feedback Contínuo:</strong> Garantir a troca de feedback entre os membros da equipe para identificar possíveis melhorias e ajustar o processo conforme necessário.
+      </li>
+    </ul>
+  </p>
+
+    
+
+
+
+</div>
+
+  <script src="../js/load-components.js"></script>
+  <script src="../js/questoes.js"></script>
+  <script src="../js/index.js"></script>
+</body>
+</html>
